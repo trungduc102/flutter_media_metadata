@@ -1,4 +1,4 @@
-package com.alexmercerind.flutter_media_metadata_example;
+package com.trungduc102.flutter_media_metadata_example;
 
 import io.flutter.embedding.android.FlutterActivity;
 

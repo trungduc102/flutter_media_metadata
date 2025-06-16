@@ -8,7 +8,7 @@
 PRODUCT_NAME = example
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.alexmercerind.example
+PRODUCT_BUNDLE_IDENTIFIER = com.trungduc102.example
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2021-2022 com.alexmercerind. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2021-2022 com.trungduc102. All rights reserved.

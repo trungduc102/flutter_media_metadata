@@ -1,4 +1,4 @@
-package com.alexmercerind.flutter_media_metadata;
+package com.trungduc102.flutter_media_metadata;
 
 import java.util.HashMap;
 import java.lang.Runnable;

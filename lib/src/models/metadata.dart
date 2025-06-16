@@ -1,4 +1,4 @@
-/// This file is a part of flutter_media_metadata (https://github.com/alexmercerind/flutter_media_metadata).
+/// This file is a part of flutter_media_metadata (https://github.com/trungduc102/flutter_media_metadata).
 ///
 /// Copyright (c) 2021-2022, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
 /// All rights reserved.
@@ -78,44 +78,44 @@ class Metadata {
   });
 
   factory Metadata.fromJson(dynamic map) => Metadata(
-        trackName: map['metadata']['trackName'],
-        // trackArtistNames: map['metadata']['trackArtistNames'] != null
-        //     ? map['metadata']['trackArtistNames'].split('/')
-        //     : null,
-        trackArtistNames: map['metadata']['trackArtistNames']?.split('/'),
-        albumName: map['metadata']['albumName'],
-        albumArtistName: map['metadata']['albumArtistName'],
-        trackNumber: parseInteger(map['metadata']['trackNumber']),
-        albumLength: parseInteger(map['metadata']['albumLength']),
-        year: parseInteger(map['metadata']['year']),
-        genre: map['genre'],
-        authorName: map['metadata']['authorName'],
-        writerName: map['metadata']['writerName'],
-        discNumber: parseInteger(map['metadata']['discNumber']),
-        mimeType: map['metadata']['mimeType'],
-        trackDuration: parseInteger(map['metadata']['trackDuration']),
-        bitrate: parseInteger(map['metadata']['bitrate']),
-        albumArt: map['albumArt'],
-        filePath: map['filePath'],
-      );
+    trackName: map['metadata']['trackName'],
+    // trackArtistNames: map['metadata']['trackArtistNames'] != null
+    //     ? map['metadata']['trackArtistNames'].split('/')
+    //     : null,
+    trackArtistNames: map['metadata']['trackArtistNames']?.split('/'),
+    albumName: map['metadata']['albumName'],
+    albumArtistName: map['metadata']['albumArtistName'],
+    trackNumber: parseInteger(map['metadata']['trackNumber']),
+    albumLength: parseInteger(map['metadata']['albumLength']),
+    year: parseInteger(map['metadata']['year']),
+    genre: map['genre'],
+    authorName: map['metadata']['authorName'],
+    writerName: map['metadata']['writerName'],
+    discNumber: parseInteger(map['metadata']['discNumber']),
+    mimeType: map['metadata']['mimeType'],
+    trackDuration: parseInteger(map['metadata']['trackDuration']),
+    bitrate: parseInteger(map['metadata']['bitrate']),
+    albumArt: map['albumArt'],
+    filePath: map['filePath'],
+  );
 
   Map<String, dynamic> toJson() => {
-        'trackName': trackName,
-        'trackArtistNames': trackArtistNames,
-        'albumName': albumName,
-        'albumArtistName': albumArtistName,
-        'trackNumber': trackNumber,
-        'albumLength': albumLength,
-        'year': year,
-        'genre': genre,
-        'authorName': authorName,
-        'writerName': writerName,
-        'discNumber': discNumber,
-        'mimeType': mimeType,
-        'trackDuration': trackDuration,
-        'bitrate': bitrate,
-        'filePath': filePath,
-      };
+    'trackName': trackName,
+    'trackArtistNames': trackArtistNames,
+    'albumName': albumName,
+    'albumArtistName': albumArtistName,
+    'trackNumber': trackNumber,
+    'albumLength': albumLength,
+    'year': year,
+    'genre': genre,
+    'authorName': authorName,
+    'writerName': writerName,
+    'discNumber': discNumber,
+    'mimeType': mimeType,
+    'trackDuration': trackDuration,
+    'bitrate': bitrate,
+    'filePath': filePath,
+  };
 
   @override
   String toString() => toJson().toString();

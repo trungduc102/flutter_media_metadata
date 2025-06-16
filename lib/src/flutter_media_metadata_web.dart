@@ -1,4 +1,4 @@
-/// This file is a part of flutter_media_metadata (https://github.com/alexmercerind/flutter_media_metadata).
+/// This file is a part of flutter_media_metadata (https://github.com/trungduc102/flutter_media_metadata).
 ///
 /// Copyright (c) 2021-2022, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
 /// All rights reserved.
@@ -50,10 +50,10 @@ class MetadataRetriever {
   }
 
   Future<dynamic> handleMethodCall(MethodCall call) => throw PlatformException(
-        code: 'Unimplemented',
-        details:
-            'flutter_media_metadata for web doesn\'t implement \'${call.method}\'',
-      );
+    code: 'Unimplemented',
+    details:
+        'flutter_media_metadata for web doesn\'t implement \'${call.method}\'',
+  );
 
   /// Extracts [Metadata] from a [File]. Works on Windows, Linux, macOS, Android & iOS.
   static Future<Metadata> fromFile(dynamic _) async {
@@ -66,34 +66,21 @@ class MetadataRetriever {
   static Future<Metadata> fromBytes(Uint8List bytes) {
     final completer = Completer<Metadata>();
     MediaInfo(
-      _Opts(
-        chunkSize: 256 * 1024,
-        coverData: true,
-        format: 'JSON',
-      ),
-      allowInterop(
-        (mediainfo) {
-          mediainfo
-              .analyzeData(
-            allowInterop(() => bytes.length),
-            allowInterop(
-              (chunkSize, offset) => _Promise(
-                allowInterop(
-                  (resolve, reject) {
-                    resolve(
-                      bytes.sublist(
-                        offset,
-                        offset + chunkSize,
-                      ),
-                    );
-                  },
+      _Opts(chunkSize: 256 * 1024, coverData: true, format: 'JSON'),
+      allowInterop((mediainfo) {
+        mediainfo
+            .analyzeData(
+              allowInterop(() => bytes.length),
+              allowInterop(
+                (chunkSize, offset) => _Promise(
+                  allowInterop((resolve, reject) {
+                    resolve(bytes.sublist(offset, offset + chunkSize));
+                  }),
                 ),
               ),
-            ),
-          )
-              .then(
-            allowInterop(
-              (result) {
+            )
+            .then(
+              allowInterop((result) {
                 var rawMetadataJson = jsonDecode(result)['media']['track'];
                 bool isFound = false;
                 for (final data in rawMetadataJson) {
@@ -115,21 +102,15 @@ class MetadataRetriever {
                   metadata['metadata'][key] = rawMetadataJson[value];
                 });
                 completer.complete(Metadata.fromJson(metadata));
-              },
-            ),
-            allowInterop(
-              () {
+              }),
+              allowInterop(() {
                 completer.completeError(Exception());
-              },
-            ),
-          );
-        },
-      ),
-      allowInterop(
-        () {
-          completer.completeError(Exception());
-        },
-      ),
+              }),
+            );
+      }),
+      allowInterop(() {
+        completer.completeError(Exception());
+      }),
     );
     return completer.future;
   }
@@ -138,9 +119,12 @@ class MetadataRetriever {
 @JS('Promise')
 class _Promise<T> {
   external _Promise(
-      void Function(void Function(T result) resolve, Function reject) executor);
-  external _Promise then(void Function(T result) onFulfilled,
-      [Function onRejected]);
+    void Function(void Function(T result) resolve, Function reject) executor,
+  );
+  external _Promise then(
+    void Function(T result) onFulfilled, [
+    Function onRejected,
+  ]);
   // external _Promise(void executor(void resolve(T result), Function reject));
   // external _Promise then(void onFulfilled(T result), [Function onRejected]);
 }
@@ -167,8 +151,10 @@ class _Opts {
 @JS()
 @anonymous
 class _MediaInfo {
-  external _Promise<String> analyzeData(int Function() getSize,
-      _Promise<Uint8List> Function(int chunkSize, int offset) promise);
+  external _Promise<String> analyzeData(
+    int Function() getSize,
+    _Promise<Uint8List> Function(int chunkSize, int offset) promise,
+  );
   // _Promise<Uint8List> promise(int chunkSize, int offset));
 
   external factory _MediaInfo();

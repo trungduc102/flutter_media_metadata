@@ -1,4 +1,4 @@
-/// This file is a part of flutter_media_metadata (https://github.com/alexmercerind/flutter_media_metadata).
+/// This file is a part of flutter_media_metadata (https://github.com/trungduc102/flutter_media_metadata).
 ///
 /// Copyright (c) 2021-2022, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
 /// All rights reserved.
@@ -35,12 +35,9 @@ import 'package:flutter_media_metadata/src/models/metadata.dart';
 class MetadataRetriever {
   /// Extracts [Metadata] from a [File]. Works on Windows, Linux, macOS, Android & iOS.
   static Future<Metadata> fromFile(File file) async {
-    var metadata = await _kChannel.invokeMethod(
-      'MetadataRetriever',
-      {
-        'filePath': file.path,
-      },
-    );
+    var metadata = await _kChannel.invokeMethod('MetadataRetriever', {
+      'filePath': file.path,
+    });
     metadata['filePath'] = file.path;
     return Metadata.fromJson(metadata);
   }

@@ -1,5 +1,5 @@
 /// This file is a part of flutter_media_metadata
-/// (https://github.com/alexmercerind/flutter_media_metadata).
+/// (https://github.com/trungduc102/flutter_media_metadata).
 ///
 /// Copyright (c) 2021-2022, Hitesh Kumar Saini <saini123hitesh@gmail.com>.
 /// All rights reserved.

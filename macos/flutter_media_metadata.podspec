@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A Flutter plugin to read metadata of media files.
                        DESC
-  s.homepage         = 'https://github.com/alexmercerind/flutter_media_metadata'
+  s.homepage         = 'https://github.com/trungduc102/flutter_media_metadata'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Hitesh Kumar Saini' => 'saini123hitesh@gmail.com' }
   s.source           = { :path => '.' }

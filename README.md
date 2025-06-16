@@ -1,4 +1,5 @@
-# [flutter_media_metadata](https://github.com/alexmercerind/flutter_media_metadata)
+# [flutter_media_metadata](https://github.com/trungduc102/flutter_media_metadata)
+
 #### A Flutter plugin to read 🔖 metadata of 🎵 media files.
 
 ## Install
@@ -17,9 +18,9 @@ _Example app running on Windows._
 
 ## Support
 
-[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/alexmercerind)
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/trungduc102)
 
-<a href="https://www.buymeacoffee.com/alexmercerind" target="_blank"><img width="217" height="60" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" ></a>
+<a href="https://www.buymeacoffee.com/trungduc102" target="_blank"><img width="217" height="60" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" ></a>
 
 Please consider buying me a coffee if you like the plugin.
 
@@ -66,18 +67,16 @@ For using the plugin on web, add following line to your `index.html`.
 
 And use `MetadataRetriever.fromBytes` instead of `MetadataRetriever.fromFile`.
 
-
 ## Platforms
 
-|Platform|Status   |Author/Maintainer                                             |                                                  
-|--------|---------|--------------------------------------------------------------|
-|Windows |✔️        |[Hitesh Kumar Saini](https://github.com/alexmercerind)        |
-|Linux   |✔️        |[Hitesh Kumar Saini](https://github.com/alexmercerind)        |
-|Android |✔️        |[Hitesh Kumar Saini](https://github.com/alexmercerind)        |
-|Web     |✔️        |[Hitesh Kumar Saini](https://github.com/alexmercerind)        |
-|MacOS   |✔️        |[@DiscombobulatedDrag](https://github.com/DiscombobulatedDrag)|
-|iOS     |✔️        |[@DiscombobulatedDrag](https://github.com/DiscombobulatedDrag)|
-
+| Platform | Status | Author/Maintainer                                              |
+| -------- | ------ | -------------------------------------------------------------- |
+| Windows  | ✔️     | [Hitesh Kumar Saini](https://github.com/trungduc102)           |
+| Linux    | ✔️     | [Hitesh Kumar Saini](https://github.com/trungduc102)           |
+| Android  | ✔️     | [Hitesh Kumar Saini](https://github.com/trungduc102)           |
+| Web      | ✔️     | [Hitesh Kumar Saini](https://github.com/trungduc102)           |
+| MacOS    | ✔️     | [@DiscombobulatedDrag](https://github.com/DiscombobulatedDrag) |
+| iOS      | ✔️     | [@DiscombobulatedDrag](https://github.com/DiscombobulatedDrag) |
 
 <img width="555" src="https://user-images.githubusercontent.com/28951144/151707427-76d75f04-9efe-4b1d-80fb-fdeea73dad26.png">
 
@@ -91,8 +90,7 @@ _Example app running on Android._
 
 _Example app running on Linux._
 
-
-## License 
+## License
 
 This library & work under this repository is MIT licensed.
 
