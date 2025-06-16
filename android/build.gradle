@@ -1,4 +1,4 @@
-group 'com.alexmercerind.flutter_media_metadata'
+group 'com.trugnduc102.flutter_media_metadata'
 version '1.0'
 
 buildscript {
@@ -22,7 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-        namespace 'com.alexmercerind.flutter_media_metadata'
+        namespace 'com.trungduc102.flutter_media_metadata'
 
     compileSdkVersion 32
 
