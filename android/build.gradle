@@ -1,4 +1,4 @@
-group 'com.trugnduc102.flutter_media_metadata'
+group 'com.trungduc102.flutter_media_metadata'
 version '1.0'
 
 buildscript {
