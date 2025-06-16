@@ -22,7 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-        namespace 'com.trungduc102.flutter_media_metadata'
+        namespace 'com.alexmercerind.flutter_media_metadata'
 
     compileSdkVersion 32
 
